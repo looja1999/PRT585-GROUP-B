@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BlazorApp1_Bamboo/1.0.0": {
+        "runtime": {
+          "BlazorApp1_Bamboo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlazorApp1_Bamboo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
