@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\C D U\\S E M 4\\PRT 585 SOFTWARE ENGENEERING PRACTICE\\PRT585-GROUP-B\\Gurvi - s345823\\Week 1\\MyFirstBlazorApp\\MyFirstBlazorApp\\MyFirstBlazorApp.csproj": {}
+  },
+  "projects": {
+    "D:\\C D U\\S E M 4\\PRT 585 SOFTWARE ENGENEERING PRACTICE\\PRT585-GROUP-B\\Gurvi - s345823\\Week 1\\MyFirstBlazorApp\\MyFirstBlazorApp\\MyFirstBlazorApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C D U\\S E M 4\\PRT 585 SOFTWARE ENGENEERING PRACTICE\\PRT585-GROUP-B\\Gurvi - s345823\\Week 1\\MyFirstBlazorApp\\MyFirstBlazorApp\\MyFirstBlazorApp.csproj",
+        "projectName": "MyFirstBlazorApp",
+        "projectPath": "D:\\C D U\\S E M 4\\PRT 585 SOFTWARE ENGENEERING PRACTICE\\PRT585-GROUP-B\\Gurvi - s345823\\Week 1\\MyFirstBlazorApp\\MyFirstBlazorApp\\MyFirstBlazorApp.csproj",
+        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
+        "outputPath": "D:\\C D U\\S E M 4\\PRT 585 SOFTWARE ENGENEERING PRACTICE\\PRT585-GROUP-B\\Gurvi - s345823\\Week 1\\MyFirstBlazorApp\\MyFirstBlazorApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
