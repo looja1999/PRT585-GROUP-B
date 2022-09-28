@@ -68,6 +68,23 @@ namespace _2DataAccessLayer.Migrations
 
                     b.ToTable("People");
                 });
+
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Student", b =>
+                {
+                    b.Property<int>("StudentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"), 1L, 1);
+
+                    b.Property<string>("StudentName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StudentId");
+
+                    b.ToTable("Students");
+                });
 #pragma warning restore 612, 618
         }
     }
