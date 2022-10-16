@@ -8,19 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PersonComponent {
 
-  public forecasts: WeatherForecast[] = [];
+  public person: Person[] = [];
 
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>('https://localhost:7246/weatherforecast').subscribe(result => {
-      this.forecasts = result;
+    http.get<Person[]>('https://localhost:7246/Person').subscribe(result => {
+      this.person = result;
     }, error => console.error(error));
   }
 
 }
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+interface Person {
+  name1: string;
+  name2: string;
+  nickname: string;
+  birth: string;
 }

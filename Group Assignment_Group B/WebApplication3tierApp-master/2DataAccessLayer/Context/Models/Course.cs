@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2DataAccessLayer.Context.Models
 {
-    public class Book
+    public class Course
     {
-        public int BookId { get; set; } // int
-        public string BookName { get; set; } // nvarchar(400)
+        public int CourseId { get; set; } // int
+        public string CourseName { get; set; } // nvarchar(400)
 
     }
 }
