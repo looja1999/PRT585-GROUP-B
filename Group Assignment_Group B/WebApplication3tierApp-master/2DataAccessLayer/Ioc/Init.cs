@@ -1,4 +1,4 @@
-﻿using _2DataAccessLayer.Interfaces;
+using _2DataAccessLayer.Interfaces;
 using _2DataAccessLayer.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +22,7 @@ namespace _2DataAccessLayer.Ioc
             services.AddScoped<IStudentDal, StudentDal>();
             services.AddScoped<IMovieDal, MovieDal>();
             services.AddScoped<IBookDal, BookDal>();
-        }
+            services.AddScoped<IRoleDal, RoleDal>();
+    }
     }
 }

@@ -1,4 +1,4 @@
-﻿using _3BusinessLogicLayer.Interfaces;
+using _3BusinessLogicLayer.Interfaces;
 using _3BusinessLogicLayer.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,8 +15,10 @@ namespace _3BusinessLogicLayer.Ioc
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IBookService, BookService>();
-            //services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IRoleService, RoleService>();
 
-        }
+      //services.AddScoped<ICategoryService, CategoryService>();
+
     }
+  }
 }
