@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonComponent } from './person/person.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SysAdminComponent } from './components/sys-admin/sys-admin.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent],
+  declarations: [AppComponent, PersonComponent, SysAdminComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
