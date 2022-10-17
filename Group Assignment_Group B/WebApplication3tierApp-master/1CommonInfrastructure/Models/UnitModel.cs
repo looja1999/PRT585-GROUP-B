@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace _1CommonInfrastructure.Models
 {
-    public class CourseModel
+    public class UnitModel
     {
-        public int CourseId { get; set; } // int
-        public string CourseName { get; set; } // nvarchar(400)
+        public int UnitId { get; set; } // int
+        public string UnitName { get; set; } // nvarchar(400)
+
     }
+
 }
