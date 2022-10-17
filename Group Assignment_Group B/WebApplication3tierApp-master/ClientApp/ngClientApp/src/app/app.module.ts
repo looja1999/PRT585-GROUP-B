@@ -18,7 +18,6 @@ import { RoleComponent } from './components/sys-admin/role/role.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
