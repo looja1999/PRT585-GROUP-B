@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Role } from 'src/app/models/role.model';
 
 @Component({
   selector: 'app-role',
@@ -8,6 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class RoleComponent implements OnInit {
 
   constructor() { }
+
+  roles : Role[] = [
+    {
+      roleId : 1,
+      roleName : "System Admin", 
+      roleStatus : true
+    }, {
+      roleId : 1,
+      roleName : "System Admin", 
+      roleStatus : true
+    },  {
+      roleId : 1,
+      roleName : "System Admin", 
+      roleStatus : true
+    },  {
+      roleId : 1,
+      roleName : "System Admin", 
+      roleStatus : true
+    }
+  ]; 
 
   ngOnInit(): void {
   }
