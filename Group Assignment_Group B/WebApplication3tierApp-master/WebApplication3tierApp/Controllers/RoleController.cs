@@ -9,7 +9,7 @@ namespace WebApplication3tierApp.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class RoleController : ControllerBase   
+    public class RoleController : ControllerBase
     {
 
         private readonly IRoleService _RoleService;
@@ -42,7 +42,8 @@ namespace WebApplication3tierApp.Controllers
             return await _RoleService.CreateRole(RoleModel);
         }
 
-        [HttpPut, Route("update")]
+        [HttpPut, Route("{id}")]
+
         public async Task<IActionResult> Update([FromBody] RoleDto requestDto)
         {
             await _RoleService.UpdateRole(requestDto.ToRoleModel());
