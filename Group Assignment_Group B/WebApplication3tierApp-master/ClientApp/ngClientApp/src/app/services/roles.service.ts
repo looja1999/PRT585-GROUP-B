@@ -16,8 +16,23 @@ export class RolesService {
     return this.http.get<Role[]>(this.baseApiUrl + '/api/role');
   }
 
-  addRole(addRoleRequest : Role) : Observable<Role>{
-    addRoleRequest.roleId = 0; 
+  addRole(addRoleRequest: Role): Observable<Role> {
+    addRoleRequest.roleId = 0;
     return this.http.post<Role>(this.baseApiUrl + '/api/role', addRoleRequest);
+  }
+
+  getRole(id: number): Observable<Role> {
+    return this.http.get<Role>(this.baseApiUrl + '/api/role/' + id);
+  }
+
+  updateRole(id: number, updatedRoleRequest: Role): Observable<Role> {
+    return this.http.put<Role>(
+      this.baseApiUrl + '/api/role/' + id,
+      updatedRoleRequest
+    );
+  }
+
+  deleteRoles(id: number): Observable<Role> {
+    return this.http.delete<Role>(this.baseApiUrl + '/api/Role/' + id);
   }
 }

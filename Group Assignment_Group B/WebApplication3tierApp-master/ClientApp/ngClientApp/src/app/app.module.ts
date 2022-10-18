@@ -13,6 +13,7 @@ import { AddRolesComponent } from './components/sys-admin/add-roles/add-roles.co
 import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
 import { CoordinatorComponent } from './components/coordinator/coordinator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddRolesComponent,
     UnitListComponent,
     CoordinatorComponent,
+    EditRolesComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,11 +10,13 @@ import { PersonComponent } from './person/person.component';
 import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
 import { CoordinatorComponent } from './components/coordinator/coordinator.component';
 import { FormsModule } from '@angular/forms';
+import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
 
 const routes: Routes = [
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
   { path: 'role/add-role', component: AddRolesComponent },
+  { path: 'role/edit-role/:id', component: EditRolesComponent },
   { path: 'sys-admin', component: SysAdminComponent },
   { path: 'coordinator', component: CoordinatorComponent },
   { path: 'unit', component: UnitListComponent },
