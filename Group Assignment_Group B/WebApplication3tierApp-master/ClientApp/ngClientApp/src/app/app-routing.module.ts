@@ -3,14 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { AddRolesComponent } from './components/sys-admin/add-roles/add-roles.component';
+import { AddRolesComponent } from './components/sys-admin/role/add-roles/add-roles.component';
 import { RoleComponent } from './components/sys-admin/role/role.component';
-import { SysAdminComponent } from './components/sys-admin/sys-admin.component';
 import { PersonComponent } from './person/person.component';
 import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
 import { CoordinatorComponent } from './components/coordinator/coordinator.component';
 import { FormsModule } from '@angular/forms';
-import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
+import { EditRolesComponent } from './components/sys-admin/role/edit-roles/edit-roles.component';
 import { ReportListComponent } from './components/coordinator/report-list/report-list.component';
 import { CourseListComponent } from './components/coordinator/course-list/course-list.component';
 
@@ -19,11 +18,10 @@ const routes: Routes = [
   { path: 'role', component: RoleComponent },
   { path: 'role/add-role', component: AddRolesComponent },
   { path: 'role/edit-role/:id', component: EditRolesComponent },
-  { path: 'sys-admin', component: SysAdminComponent },
   { path: 'coordinator', component: CoordinatorComponent },
   { path: 'unit', component: UnitListComponent },
-  { path: 'report', component: ReportListComponent},
-  { path: 'course', component: CourseListComponent},
+  { path: 'report', component: ReportListComponent },
+  { path: 'course', component: CourseListComponent },
 ];
 
 @NgModule({
