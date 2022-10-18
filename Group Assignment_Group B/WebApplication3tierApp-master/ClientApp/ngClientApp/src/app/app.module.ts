@@ -14,6 +14,7 @@ import { UnitListComponent } from './components/coordinator/unit-list/unit-list.
 import { CoordinatorComponent } from './components/coordinator/coordinator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
+import { ReportListComponent } from './components/coordinator/report-list/report-list.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles
     UnitListComponent,
     CoordinatorComponent,
     EditRolesComponent,
+    ReportListComponent,
   ],
   imports: [
     BrowserModule,
