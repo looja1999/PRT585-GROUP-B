@@ -6,11 +6,16 @@ import { AppComponent } from './app.component';
 import { RoleComponent } from './components/sys-admin/role/role.component';
 import { SysAdminComponent } from './components/sys-admin/sys-admin.component';
 import { PersonComponent } from './person/person.component';
+import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
+import { CoordinatorComponent } from './components/coordinator/coordinator.component';
+
 
 const routes: Routes = [
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
-  { path: 'sys-admin', component: SysAdminComponent}
+  { path: 'sys-admin', component: SysAdminComponent},
+  { path: 'coordinator', component: CoordinatorComponent},
+  { path: 'unit', component: UnitListComponent}
 ];
 
 @NgModule({
