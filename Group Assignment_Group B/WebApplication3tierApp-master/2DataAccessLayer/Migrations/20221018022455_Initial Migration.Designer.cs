@@ -12,33 +12,37 @@ using _2DataAccessLayer.Context;
 namespace _2DataAccessLayer.Migrations
 {
     [DbContext(typeof(DBEntitiesContext))]
-    [Migration("20221012015931_Initial Migration")]
+    [Migration("20221018022455_Initial Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.9")
+                .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Book", b =>
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Major", b =>
                 {
-                    b.Property<int>("BookId")
+                    b.Property<int>("MajorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MajorId"), 1L, 1);
 
-                    b.Property<string>("BookName")
+                    b.Property<string>("MajorCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("BookId");
+                    b.Property<string>("MajorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Books");
+                    b.HasKey("MajorId");
+
+                    b.ToTable("Majors");
                 });
 
             modelBuilder.Entity("_2DataAccessLayer.Context.Models.Movie", b =>
@@ -88,6 +92,26 @@ namespace _2DataAccessLayer.Migrations
                     b.ToTable("People");
                 });
 
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Role", b =>
+                {
+                    b.Property<int>("RoleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"), 1L, 1);
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("RoleStatus")
+                        .HasColumnType("bit");
+
+                    b.HasKey("RoleId");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("_2DataAccessLayer.Context.Models.Student", b =>
                 {
                     b.Property<int>("StudentId")
@@ -103,6 +127,23 @@ namespace _2DataAccessLayer.Migrations
                     b.HasKey("StudentId");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Unit", b =>
+                {
+                    b.Property<int>("UnitId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UnitId"), 1L, 1);
+
+                    b.Property<string>("UnitName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UnitId");
+
+                    b.ToTable("Units");
                 });
 #pragma warning restore 612, 618
         }

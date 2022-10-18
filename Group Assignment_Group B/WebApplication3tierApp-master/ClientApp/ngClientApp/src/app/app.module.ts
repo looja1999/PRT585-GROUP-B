@@ -13,7 +13,7 @@ import { AddRolesComponent } from './components/sys-admin/add-roles/add-roles.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, SysAdminComponent, RoleComponent, AddRolesComponent],
+  declarations: [AppComponent, PersonComponent, SysAdminComponent, RoleComponent, AddRolesComponent, UnitListComponent, CoordinatorComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

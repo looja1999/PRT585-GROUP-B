@@ -23,6 +23,8 @@ namespace _2DataAccessLayer.Ioc
             services.AddScoped<IMovieDal, MovieDal>();
             services.AddScoped<IRoleDal, RoleDal>();
             services.AddScoped<IUnitDal, UnitDal>();
+            services.AddScoped<IMajorDal, MajorDal>();
+            services.AddScoped<IReportDal, ReportDal>();
         }
     }
 }
