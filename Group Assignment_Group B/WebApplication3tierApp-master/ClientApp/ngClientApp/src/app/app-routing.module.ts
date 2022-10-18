@@ -12,6 +12,7 @@ import { CoordinatorComponent } from './components/coordinator/coordinator.compo
 import { FormsModule } from '@angular/forms';
 import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
 import { ReportListComponent } from './components/coordinator/report-list/report-list.component';
+import { CourseListComponent } from './components/coordinator/course-list/course-list.component';
 
 const routes: Routes = [
   { path: 'person', component: PersonComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'coordinator', component: CoordinatorComponent },
   { path: 'unit', component: UnitListComponent },
   { path: 'report', component: ReportListComponent},
+  { path: 'course', component: CourseListComponent},
 ];
 
 @NgModule({
