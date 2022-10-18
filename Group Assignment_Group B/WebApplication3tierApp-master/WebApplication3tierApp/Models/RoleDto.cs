@@ -6,7 +6,7 @@ namespace WebApplication3tierApp.Models
     {
         public int RoleId { get; set; }
         public string RoleName { get; set; }
-        public bool RoleStatus { get; set; }
+        public string? RoleStatus { get; set; }
  
     }
 

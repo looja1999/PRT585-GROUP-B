@@ -1,0 +1,58 @@
+<div class="container my-5">
+  <!-- Form  -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-4">
+      <h2>Edit a role</h2>
+      <hr />
+      <form #form="ngForm" (ngSubmit)="updateRole()">
+        <!-- Id -->
+        <div class="mb-3">
+          <label for="roleId" class="form-label">Role Id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="roleId"
+            [(ngModel)]="roleDetails.roleId"
+            name="roleId"
+            readonly
+          />
+        </div>
+
+        <!-- Name -->
+        <div class="mb-3">
+          <label for="roleName" class="form-label">Role Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="roleName"
+            [(ngModel)]="roleDetails.roleName"
+            name="roleName"
+          />
+          <div id="roleName" class="form-text">Role name must be unique.</div>
+        </div>
+
+        <!-- Status -->
+        <!-- Role Status -->
+        <div class="mb-3">
+          <label for="roleStatus" class="form-label">Role Status</label>
+          <input
+            type="text"
+            class="form-control"
+            id="roleStatus"
+            [(ngModel)]="roleDetails.roleStatus"
+            name="roleStatus"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success w-50">Save</button>
+        <button
+          type="Delte"
+          class="btn btn-danger w-50"
+          (click)="deleteRole(roleDetails.roleId)"
+        >
+          Delete
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

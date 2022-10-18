@@ -14,19 +14,19 @@ export class RoleComponent implements OnInit {
     // {
     //   roleId : 1,
     //   roleName : "System Admin",
-    //   roleStatus : true
+    //   roleStatus : "true"
     // }, {
     //   roleId : 1,
     //   roleName : "System Admin",
-    //   roleStatus : true
+    //   roleStatus : "true"
     // },  {
     //   roleId : 1,
     //   roleName : "System Admin",
-    //   roleStatus : true
+    //   roleStatus : "true"
     // },  {
     //   roleId : 1,
     //   roleName : "System Admin",
-    //   roleStatus : true
+    //   roleStatus : "true"
     // }
   ];
 

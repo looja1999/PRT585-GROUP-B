@@ -11,7 +11,7 @@ namespace _1CommonInfrastructure.Models
     {
         public int RoleId { get; set; } // int
         public string RoleName { get; set; } // nvarchar(400)
-        public bool RoleStatus { get; set; } // boolean
+        public string RoleStatus { get; set; } // boolean
 
     }
 

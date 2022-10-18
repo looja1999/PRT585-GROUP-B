@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <!-- Form  -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-4">
+      <h2>Add a role</h2>
+      <hr />
+      <form (ngSubmit)="addRole()" #form="ngForm">
+        <div class="mb-3">
+          <label for="roleName" class="form-label">Role Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="roleName"
+            [(ngModel)]="addRoleRequest.roleName"
+            name="roleName"
+          />
+          <div id="roleName" class="form-text">Role name must be unique.</div>
+        </div>
+
+        <!-- Status -->
+        <!-- Role Status -->
+        <div class="mb-3">
+          <label for="roleStatus" class="form-label">Role Status</label>
+          <input
+            type="text"
+            class="form-control"
+            id="roleStatus"
+            [(ngModel)]="addRoleRequest.roleStatus"
+            name="roleStatus"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
