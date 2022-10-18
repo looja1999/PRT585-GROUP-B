@@ -15,4 +15,9 @@ export class RolesService {
   getAllRoles(): Observable<Role[]> {
     return this.http.get<Role[]>(this.baseApiUrl + '/api/role');
   }
+
+  addRole(addRoleRequest : Role) : Observable<Role>{
+    addRoleRequest.roleId = 0; 
+    return this.http.post<Role>(this.baseApiUrl + '/api/role', addRoleRequest);
+  }
 }

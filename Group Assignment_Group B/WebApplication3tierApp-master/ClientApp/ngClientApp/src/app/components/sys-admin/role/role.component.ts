@@ -11,23 +11,23 @@ export class RoleComponent implements OnInit {
   constructor(private rolesService: RolesService) {}
 
   roles: Role[] = [
-    // {
-    //   roleId : 1,
-    //   roleName : "System Admin",
-    //   roleStatus : true
-    // }, {
-    //   roleId : 1,
-    //   roleName : "System Admin",
-    //   roleStatus : true
-    // },  {
-    //   roleId : 1,
-    //   roleName : "System Admin",
-    //   roleStatus : true
-    // },  {
-    //   roleId : 1,
-    //   roleName : "System Admin",
-    //   roleStatus : true
-    // }
+    {
+      roleId : 1,
+      roleName : "System Admin",
+      roleStatus : "true"
+    }, {
+      roleId : 1,
+      roleName : "System Admin",
+      roleStatus : "true"
+    },  {
+      roleId : 1,
+      roleName : "System Admin",
+      roleStatus : "true"
+    },  {
+      roleId : 1,
+      roleName : "System Admin",
+      roleStatus : "true"
+    }
   ];
 
   ngOnInit(): void {

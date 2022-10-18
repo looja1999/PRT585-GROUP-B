@@ -1,5 +1,5 @@
 export interface Role {
-  roleId : 1; 
+  roleId : number; 
   roleName : string; 
-  roleStatus : boolean; 
+  roleStatus : string; 
 }
