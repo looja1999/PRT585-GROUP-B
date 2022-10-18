@@ -9,20 +9,24 @@ import { SysAdminComponent } from './components/sys-admin/sys-admin.component';
 import { PersonComponent } from './person/person.component';
 import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
 import { CoordinatorComponent } from './components/coordinator/coordinator.component';
-
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
-  { path: 'role/add-role', component: AddRolesComponent},
-  { path: 'sys-admin', component: SysAdminComponent},
-  { path: 'coordinator', component: CoordinatorComponent},
-  { path: 'unit', component: UnitListComponent}
-
+  { path: 'role/add-role', component: AddRolesComponent },
+  { path: 'sys-admin', component: SysAdminComponent },
+  { path: 'coordinator', component: CoordinatorComponent },
+  { path: 'unit', component: UnitListComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), BrowserModule, CommonModule],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes),
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

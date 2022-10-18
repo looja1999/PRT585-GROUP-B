@@ -10,10 +10,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SysAdminComponent } from './components/sys-admin/sys-admin.component';
 import { RoleComponent } from './components/sys-admin/role/role.component';
 import { AddRolesComponent } from './components/sys-admin/add-roles/add-roles.component';
+import { UnitListComponent } from './components/coordinator/unit-list/unit-list.component';
+import { CoordinatorComponent } from './components/coordinator/coordinator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, SysAdminComponent, RoleComponent, AddRolesComponent, UnitListComponent, CoordinatorComponent],
+  declarations: [
+    AppComponent,
+    PersonComponent,
+    SysAdminComponent,
+    RoleComponent,
+    AddRolesComponent,
+    UnitListComponent,
+    CoordinatorComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -21,7 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
