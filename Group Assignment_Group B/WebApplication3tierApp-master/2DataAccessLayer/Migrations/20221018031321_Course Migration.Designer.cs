@@ -12,8 +12,8 @@ using _2DataAccessLayer.Context;
 namespace _2DataAccessLayer.Migrations
 {
     [DbContext(typeof(DBEntitiesContext))]
-    [Migration("20221018023637_Major Migration")]
-    partial class MajorMigration
+    [Migration("20221018031321_Course Migration")]
+    partial class CourseMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,27 @@ namespace _2DataAccessLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Course", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseId"), 1L, 1);
+
+                    b.Property<string>("CourseCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CourseName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CourseId");
+
+                    b.ToTable("Courses");
+                });
 
             modelBuilder.Entity("_2DataAccessLayer.Context.Models.Major", b =>
                 {
@@ -90,6 +111,23 @@ namespace _2DataAccessLayer.Migrations
                     b.HasKey("PersonId");
 
                     b.ToTable("People");
+                });
+
+            modelBuilder.Entity("_2DataAccessLayer.Context.Models.Report", b =>
+                {
+                    b.Property<int>("ReportId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReportId"), 1L, 1);
+
+                    b.Property<string>("ReportName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ReportId");
+
+                    b.ToTable("Reports");
                 });
 
             modelBuilder.Entity("_2DataAccessLayer.Context.Models.Role", b =>

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace _2DataAccessLayer.Interfaces
 {
-    public interface IMajorDal
+    public interface ICourseDal
     {
         // Getters
-        MajorModel? GetById(int MajorId);
-        List<MajorModel> GetAll();
+        CourseModel? GetById(int CourseId);
+        List<CourseModel> GetAll();
 
         // Actions
-        int CreateMajor(MajorModel Major);
-        void UpdateMajor(MajorModel Major);
-        void DeleteMajor(int MajorId);
+        int CreateCourse(CourseModel Course);
+        void UpdateCourse(CourseModel Course);
+        void DeleteCourse(int CourseId);
     }
 }

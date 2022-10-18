@@ -20,8 +20,8 @@ namespace _2DataAccessLayer.Context
         public DbSet<Student> Students { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Unit> Units { get; set; }
-        public DbSet<Major> Majors { get; set; }
         public DbSet<Report> Reports { get; set; }
+        public DbSet<Course> Courses { get; set; }
         //public DbSet<Category> Categories { get; set; }
     }
 
