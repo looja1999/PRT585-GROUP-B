@@ -19,8 +19,7 @@ namespace _2DataAccessLayer.Maps
             dst.CourseId = src.CourseId;
             dst.CourseCode = src.CourseCode;
             dst.CourseName = src.CourseName;
-            dst.IsDeleted = src.IsDeleted;
-
+     
             return dst;
         }
 
@@ -34,7 +33,6 @@ namespace _2DataAccessLayer.Maps
             dst.CourseId = src.CourseId;
             dst.CourseCode = src.CourseCode;
             dst.CourseName = src.CourseName;
-            dst.IsDeleted = src.IsDeleted;
 
             return dst;
         }

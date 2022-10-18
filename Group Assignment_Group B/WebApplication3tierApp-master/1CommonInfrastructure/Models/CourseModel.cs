@@ -12,7 +12,6 @@ namespace _1CommonInfrastructure.Models
         public int CourseId { get; set; } // int
         public string CourseCode { get; set; } // nvarchar(400)
         public string CourseName { get; set; } // nvarchar(400)
-        public bool IsDeleted { get; set; } // bit
 
     }
 
