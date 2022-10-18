@@ -15,4 +15,22 @@ export class ReportListService {
   getAllReports(): Observable<ReportList[]> {
     return this.http.get<ReportList[]>(this.baseApiUrl + '/api/Report');
   }
+  addReport(addReportRequest: ReportList): Observable<ReportList> {
+    addReportRequest.reportId = 0;
+    return this.http.post<ReportList>(this.baseApiUrl + '/api/Report', addReportRequest);
+  }
+  getReport(id: number): Observable<ReportList> {
+    return this.http.get<ReportList>(this.baseApiUrl + '/api/Report/' + id);
+  }
+
+  updateReport(id: number, updatedReportRequest: ReportList): Observable<ReportList> {
+    return this.http.put<ReportList>(
+      this.baseApiUrl + '/api/Report/' + id,
+      updatedReportRequest
+    );
+  }
+
+  deleteReport(id: number): Observable<ReportList> {
+    return this.http.delete<ReportList>(this.baseApiUrl + '/api/Report/' + id);
+  }
 }

@@ -16,6 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditRolesComponent } from './components/sys-admin/edit-roles/edit-roles.component';
 import { ReportListComponent } from './components/coordinator/report-list/report-list.component';
 import { CourseListComponent } from './components/coordinator/course-list/course-list.component';
+import { AddCourseComponent } from './components/coordinator/add-course/add-course.component';
+import { EditCourseComponent } from './components/coordinator/edit-course/edit-course.component';
+import { AddUnitComponent } from './components/coordinator/add-unit/add-unit.component';
+import { EditUnitComponent } from './components/coordinator/edit-unit/edit-unit.component';
+import { AddReportComponent } from './components/coordinator/add-report/add-report.component';
+import { EditReportComponent } from './components/coordinator/edit-report/edit-report.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +35,12 @@ import { CourseListComponent } from './components/coordinator/course-list/course
     EditRolesComponent,
     ReportListComponent,
     CourseListComponent,
+    AddCourseComponent,
+    EditCourseComponent,
+    AddUnitComponent,
+    EditUnitComponent,
+    AddReportComponent,
+    EditReportComponent,    
   ],
   imports: [
     BrowserModule,

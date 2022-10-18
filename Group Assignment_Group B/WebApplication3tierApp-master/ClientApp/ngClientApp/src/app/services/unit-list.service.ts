@@ -15,4 +15,22 @@ export class UnitListService {
   getAllUnits(): Observable<UnitList[]> {
     return this.http.get<UnitList[]>(this.baseApiUrl + '/api/Unit');
   }
+  addUnit(addUnitRequest: UnitList): Observable<UnitList> {
+    addUnitRequest.unitId = 0;
+    return this.http.post<UnitList>(this.baseApiUrl + '/api/Unit', addUnitRequest);
+  }
+  getUnit(id: number): Observable<UnitList> {
+    return this.http.get<UnitList>(this.baseApiUrl + '/api/Unit/' + id);
+  }
+
+  updateUnit(id: number, updatedUnitRequest: UnitList): Observable<UnitList> {
+    return this.http.put<UnitList>(
+      this.baseApiUrl + '/api/Unit/' + id,
+      updatedUnitRequest
+    );
+  }
+
+  deleteUnit(id: number): Observable<UnitList> {
+    return this.http.delete<UnitList>(this.baseApiUrl + '/api/Unit/' + id);
+  }
 }
