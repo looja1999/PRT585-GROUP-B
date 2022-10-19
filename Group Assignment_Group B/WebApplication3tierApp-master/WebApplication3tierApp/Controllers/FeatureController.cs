@@ -9,51 +9,51 @@ namespace WebApplication3tierApp.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class RoleController : ControllerBase
+    public class FeatureController : ControllerBase
     {
 
-        private readonly IRoleService _RoleService;
-        private readonly ILogger<RoleController> _logger;
+        private readonly IFeatureService _FeatureService;
+        private readonly ILogger<FeatureController> _logger;
 
-        public RoleController(IRoleService RoleService, ILogger<RoleController> logger)
+        public FeatureController(IFeatureService FeatureService, ILogger<FeatureController> logger)
         {
-            _RoleService = RoleService;
+            _FeatureService = FeatureService;
             _logger = logger;
         }
 
-        [HttpGet("", Name = "GetAllRoles")]
-        public async Task<List<RoleDto>> GetAll()
+        [HttpGet("", Name = "GetAllFeatures")]
+        public async Task<List<FeatureDto>> GetAll()
         {
-            var result = await _RoleService.GetAll();
-            return result.Select(x => x.ToRoleDto()).ToList();
+            var result = await _FeatureService.GetAll();
+            return result.Select(x => x.ToFeatureDto()).ToList();
         }
 
-        [HttpGet("{RoleId}", Name = "GetRole")]
-        public async Task<RoleDto?> Get(int RoleId)
+        [HttpGet("{FeatureId}", Name = "GetFeature")]
+        public async Task<FeatureDto?> Get(int FeatureId)
         {
-            var result = await _RoleService.GetById(RoleId);
-            return result?.ToRoleDto();
+            var result = await _FeatureService.GetById(FeatureId);
+            return result?.ToFeatureDto();
         }
 
         [HttpPost, Route("")]
-        public async Task<int> Create([FromBody] RoleDto requestDto)
+        public async Task<int> Create([FromBody] FeatureDto requestDto)
         {
-            var RoleModel = requestDto.ToRoleModel();
-            return await _RoleService.CreateRole(RoleModel);
+            var FeatureModel = requestDto.ToFeatureModel();
+            return await _FeatureService.CreateFeature(FeatureModel);
         }
 
         [HttpPut, Route("{id}")]
 
-        public async Task<IActionResult> Update([FromBody] RoleDto requestDto)
+        public async Task<IActionResult> Update([FromBody] FeatureDto requestDto)
         {
-            await _RoleService.UpdateRole(requestDto.ToRoleModel());
+            await _FeatureService.UpdateFeature(requestDto.ToFeatureModel());
             return Ok();
         }
 
-        [HttpDelete, Route("{RoleId}")]
-        public async Task<IActionResult> Delete(int RoleId)
+        [HttpDelete, Route("{FeatureId}")]
+        public async Task<IActionResult> Delete(int FeatureId)
         {
-            await _RoleService.DeleteRole(RoleId);
+            await _FeatureService.DeleteFeature(FeatureId);
             return Ok();
         }
     }

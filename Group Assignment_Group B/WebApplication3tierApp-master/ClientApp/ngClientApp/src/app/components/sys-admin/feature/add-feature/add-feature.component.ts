@@ -6,25 +6,28 @@ import { FeaturesService } from 'src/app/services/features.service';
 @Component({
   selector: 'app-add-feature',
   templateUrl: './add-feature.component.html',
-  styleUrls: ['./add-feature.component.less']
+  styleUrls: ['./add-feature.component.less'],
 })
 export class AddFeatureComponent implements OnInit {
+  addFeatureRequest: Feature = {
+    featureId: 0,
+    featureName: '',
+  };
 
-  addFeatureRequest : Feature = {
-    featureId : 0, 
-    featureName : ""
-  }
+  constructor(
+    private featuresService: FeaturesService,
+    private router: Router
+  ) {}
 
-  constructor(private featuresService : FeaturesService, private router : Router) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  addFeature(){
+  addFeature() {
     this.featuresService.addFeature(this.addFeatureRequest).subscribe({
-      next : res => this.router.navigate(['/feature']),
-      error : err => console.error(err) 
-    })
+      next: (res) => {
+        this.router.navigate(['feature']);
+        console.log(res);
+      },
+      error: (err) => console.error(err),
+    });
   }
-
 }
