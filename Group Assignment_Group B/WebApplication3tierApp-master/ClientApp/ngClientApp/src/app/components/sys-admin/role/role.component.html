@@ -19,7 +19,6 @@
         <tr class="table-dark">
           <th scope="col"># Role Id</th>
           <th scope="col">Role name</th>
-          <th scope="col">Role Status</th>
           <th scope="col"></th>
         </tr>
       </thead>
@@ -27,7 +26,7 @@
         <tr *ngFor="let role of roles">
           <td>{{ role.roleId }}</td>
           <td>{{ role.roleName }}</td>
-          <td>{{ role.roleStatus }}</td>
+
           <td>
             <a [routerLink]="['edit-role', role.roleId]"> Edit</a>
           </td>

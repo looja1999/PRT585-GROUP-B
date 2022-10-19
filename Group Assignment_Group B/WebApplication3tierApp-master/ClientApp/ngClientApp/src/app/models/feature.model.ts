@@ -1,4 +1,4 @@
 export interface Feature {
-  featureId : number; 
-  featureName : string; 
+  featureId : number;
+  featureName : string;
 }

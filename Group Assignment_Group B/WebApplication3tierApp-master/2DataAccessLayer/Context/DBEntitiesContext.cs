@@ -22,6 +22,9 @@ namespace _2DataAccessLayer.Context
         public DbSet<Unit> Units { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Feature> Features { get; set; }
+
+
         //public DbSet<Category> Categories { get; set; }
     }
 
