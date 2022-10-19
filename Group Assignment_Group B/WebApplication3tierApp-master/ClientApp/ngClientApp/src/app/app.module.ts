@@ -21,6 +21,9 @@ import { AddUnitComponent } from './components/coordinator/add-unit/add-unit.com
 import { EditUnitComponent } from './components/coordinator/edit-unit/edit-unit.component';
 import { AddReportComponent } from './components/coordinator/add-report/add-report.component';
 import { EditReportComponent } from './components/coordinator/edit-report/edit-report.component';
+import { FeatureComponent } from './components/sys-admin/feature/feature/feature.component';
+import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/add-feature.component';
+import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { EditReportComponent } from './components/coordinator/edit-report/edit-r
     AddUnitComponent,
     EditUnitComponent,
     AddReportComponent,
-    EditReportComponent,    
+    EditReportComponent,
+    FeatureComponent,
+    AddFeatureComponent,
+    EditFeatureComponent,
   ],
   imports: [
     BrowserModule,
