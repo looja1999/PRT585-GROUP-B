@@ -24,6 +24,7 @@ import { EditReportComponent } from './components/coordinator/edit-report/edit-r
 import { FeatureComponent } from './components/sys-admin/feature/feature/feature.component';
 import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/add-feature.component';
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { EditFeatureComponent } from './components/sys-admin/feature/edit-featur
     FeatureComponent,
     AddFeatureComponent,
     EditFeatureComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

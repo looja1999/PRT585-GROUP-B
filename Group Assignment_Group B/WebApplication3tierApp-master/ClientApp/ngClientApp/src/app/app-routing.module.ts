@@ -21,8 +21,10 @@ import { EditReportComponent } from './components/coordinator/edit-report/edit-r
 import { FeatureComponent } from './components/sys-admin/feature/feature/feature.component';
 import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/add-feature.component';
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
+  { path: '', component: DashboardComponent},
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
   { path: 'role/add-role', component: AddRolesComponent },
