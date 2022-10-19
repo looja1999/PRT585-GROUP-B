@@ -1,3 +1,4 @@
+using _2DataAccessLayer.Context.Models;
 using _2DataAccessLayer.Interfaces;
 using _2DataAccessLayer.Services;
 using Microsoft.Extensions.Configuration;
@@ -25,6 +26,9 @@ namespace _2DataAccessLayer.Ioc
             services.AddScoped<IUnitDal, UnitDal>();
             services.AddScoped<IReportDal, ReportDal>();
             services.AddScoped<ICourseDal, CourseDal>();
+            services.AddScoped<IFeatureDal, FeatureDal>();
+
+
         }
     }
 }
