@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 using FluentValidation;
 
 namespace _1CommonInfrastructure.Models
-{
-    internal class CourseValidator
+{    
+    public class CourseValidator : AbstractValidator<CourseModel>
     {
+        public CourseValidator()
+        {
+            RuleFor(x => x.CourseName).NotEmpty().WithMessage("Course Name is required");
+
+        }
+
+
     }
+
+
 }

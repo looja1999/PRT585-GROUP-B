@@ -1,4 +1,5 @@
-﻿using _2DataAccessLayer.Services;
+﻿using _1CommonInfrastructure.Models;
+using _2DataAccessLayer.Services;
 using _3BusinessLogicLayer.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -36,10 +37,22 @@ namespace WebApplication3tierApp.Controllers
         }
 
         [HttpPost, Route("")]
-        public async Task<int> Create([FromBody] CourseDto requestDto)
-        {
+        public async Task<IActionResult> Create([FromBody] CourseDto requestDto)
+        {            
             var CourseModel = requestDto.ToCourseModel();
-            return await _CourseService.CreateCourse(CourseModel);
+            CourseValidator validator = new CourseValidator();
+            var validationResult = validator.Validate(CourseModel);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            else
+            {
+                _CourseService.CreateCourse(CourseModel);
+                return Ok();
+            }
+
+            //return await 
         }
 
         [HttpPut, Route("{id}")]
