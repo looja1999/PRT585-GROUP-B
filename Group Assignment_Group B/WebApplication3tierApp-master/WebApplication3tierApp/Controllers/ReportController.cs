@@ -42,7 +42,7 @@ namespace WebApplication3tierApp.Controllers
             return await _ReportService.CreateReport(ReportModel);
         }
 
-        [HttpPut, Route("update")]
+        [HttpPut, Route("{id}")]
         public async Task<IActionResult> Update([FromBody] ReportDto requestDto)
         {
             await _ReportService.UpdateReport(requestDto.ToReportModel());

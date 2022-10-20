@@ -42,7 +42,7 @@ namespace WebApplication3tierApp.Controllers
             return await _UnitService.CreateUnit(UnitModel);
         }
 
-        [HttpPut, Route("update")]
+        [HttpPut, Route("{id}")]
         public async Task<IActionResult> Update([FromBody] UnitDto requestDto)
         {
             await _UnitService.UpdateUnit(requestDto.ToUnitModel());
