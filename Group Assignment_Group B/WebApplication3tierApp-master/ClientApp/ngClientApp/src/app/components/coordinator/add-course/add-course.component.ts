@@ -9,6 +9,7 @@ import { CourseListService } from 'src/app/services/course-list.service';
   styleUrls: ['./add-course.component.less']
 })
 export class AddCourseComponent implements OnInit {
+  errors: string[] = [];
   addCourseRequest: CourseList = {
     courseId: 0,
     courseCode: '',
@@ -17,7 +18,7 @@ export class AddCourseComponent implements OnInit {
 
   constructor(private courselistService: CourseListService, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
   addCourse() {
     console.log(this.addCourseRequest);
@@ -28,7 +29,8 @@ export class AddCourseComponent implements OnInit {
       },
       error: (msg) => {
         console.error(msg);
+        this.errors.push(msg.error);
       },
-    });
+    });    
   }
 }

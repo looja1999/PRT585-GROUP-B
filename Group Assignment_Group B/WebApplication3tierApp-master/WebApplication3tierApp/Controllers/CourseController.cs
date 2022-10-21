@@ -1,6 +1,7 @@
 ﻿using _1CommonInfrastructure.Models;
 using _2DataAccessLayer.Services;
 using _3BusinessLogicLayer.Interfaces;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication3tierApp.Models;
@@ -44,7 +45,12 @@ namespace WebApplication3tierApp.Controllers
             var validationResult = validator.Validate(CourseModel);
             if (!validationResult.IsValid)
             {
-                return BadRequest(validationResult.Errors);
+                foreach (ValidationFailure failer in validationResult.Errors)
+                {
+
+                    ModelState.AddModelError(failer.PropertyName, failer.ErrorMessage);
+                }
+                return BadRequest(ModelState);
             }
             else
             {

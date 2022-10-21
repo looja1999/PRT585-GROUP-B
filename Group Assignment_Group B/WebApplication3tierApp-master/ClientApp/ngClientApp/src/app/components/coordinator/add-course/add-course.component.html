@@ -4,6 +4,15 @@
       <div class="col-4">
         <h2>Add a Course</h2>
         <hr />
+
+        <div class="alert alert-danger" role="alert" *ngIf="errors.length > 0">
+          <ul>
+            <li *ngFor="let error of errors">
+              {{ error | json }}
+            </li>
+          </ul>
+        </div>        
+
         <form (ngSubmit)="addCourse()" #form="ngForm">
           <div class="mb-3">
             <label for="courseCode" class="form-label">Course Code</label>
