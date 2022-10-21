@@ -21,6 +21,7 @@ export class AddCourseComponent implements OnInit {
   ngOnInit(): void {    
   }
   addCourse() {
+    this.errors = [];
     console.log(this.addCourseRequest);
     this.courselistService.addCourse(this.addCourseRequest).subscribe({
       next: (courselists) => {

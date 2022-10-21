@@ -12,7 +12,7 @@ namespace _1CommonInfrastructure.Models
         public CourseValidator()
         {
             RuleFor(x => x.CourseName).NotEmpty().WithMessage("Course Name is required");
-
+            RuleFor(x => x.CourseCode).NotEmpty().WithMessage("Course Code is required");
         }
 
 
