@@ -22,9 +22,11 @@ import { FeatureComponent } from './components/sys-admin/feature/feature/feature
 import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/add-feature.component';
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
   { path: 'role/add-role', component: AddRolesComponent },

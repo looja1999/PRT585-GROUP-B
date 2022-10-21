@@ -25,6 +25,7 @@ import { FeatureComponent } from './components/sys-admin/feature/feature/feature
 import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/add-feature.component';
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AddFeatureComponent,
     EditFeatureComponent,
     DashboardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
