@@ -1,8 +1,11 @@
-﻿using _2DataAccessLayer.Services;
+﻿using _1CommonInfrastructure.Models;
+using _2DataAccessLayer.Services;
 using _3BusinessLogicLayer.Interfaces;
+using _3BusinessLogicLayer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication3tierApp.Models;
+using FluentValidation.Results;
 
 namespace WebApplication3tierApp.Controllers
 {
@@ -36,10 +39,24 @@ namespace WebApplication3tierApp.Controllers
         }
 
         [HttpPost, Route("")]
-        public async Task<int> Create([FromBody] UnitDto requestDto)
+        public async Task<IActionResult> Create([FromBody] UnitDto requestDto)
         {
-            var UnitModel = requestDto.ToUnitModel();
-            return await _UnitService.CreateUnit(UnitModel);
+            var UnitModel = requestDto.ToUnitModel();            
+            UnitValidator validator = new UnitValidator();
+            var validationResult = validator.Validate(UnitModel);
+            if (!validationResult.IsValid)
+            {
+                foreach (ValidationFailure failer in validationResult.Errors)
+                {
+                    ModelState.AddModelError(failer.PropertyName, failer.ErrorMessage);
+                }
+                return BadRequest(ModelState);
+            }
+            else
+            {
+                _UnitService.CreateUnit(UnitModel);
+                return Ok();
+            }
         }
 
         [HttpPut, Route("{id}")]

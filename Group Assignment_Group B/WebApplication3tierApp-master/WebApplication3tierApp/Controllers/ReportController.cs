@@ -1,8 +1,11 @@
-﻿using _2DataAccessLayer.Services;
+﻿using _1CommonInfrastructure.Models;
+using _2DataAccessLayer.Services;
 using _3BusinessLogicLayer.Interfaces;
+using _3BusinessLogicLayer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication3tierApp.Models;
+using FluentValidation.Results;
 
 namespace WebApplication3tierApp.Controllers
 {
@@ -36,10 +39,24 @@ namespace WebApplication3tierApp.Controllers
         }
 
         [HttpPost, Route("")]
-        public async Task<int> Create([FromBody] ReportDto requestDto)
-        {
+        public async Task<IActionResult> Create([FromBody] ReportDto requestDto)
+        {            
             var ReportModel = requestDto.ToReportModel();
-            return await _ReportService.CreateReport(ReportModel);
+            ReportValidator validator = new ReportValidator();
+            var validationResult = validator.Validate(ReportModel);
+            if (!validationResult.IsValid)
+            {
+                foreach (ValidationFailure failer in validationResult.Errors)
+                {
+                    ModelState.AddModelError(failer.PropertyName, failer.ErrorMessage);
+                }
+                return BadRequest(ModelState);
+            }
+            else
+            {
+                _ReportService.CreateReport(ReportModel);
+                return Ok();
+            }
         }
 
         [HttpPut, Route("{id}")]
