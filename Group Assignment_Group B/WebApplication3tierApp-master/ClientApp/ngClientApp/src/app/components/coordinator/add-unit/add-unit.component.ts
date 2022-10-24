@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-unit.component.less']
 })
 export class AddUnitComponent implements OnInit {
+  errors: string[] = [];
   addUnitRequest: UnitList = {
     unitId: 0,
     unitName: '',
@@ -19,6 +20,7 @@ export class AddUnitComponent implements OnInit {
   ngOnInit(): void {
   }
   addUnit() {
+    this.errors = [];
     console.log(this.addUnitRequest);
     this.unitlistService.addUnit(this.addUnitRequest).subscribe({
       next: (unitlists) => {
@@ -27,6 +29,7 @@ export class AddUnitComponent implements OnInit {
       },
       error: (msg) => {
         console.error(msg);
+        this.errors.push(msg.error);
       },
     });
   }

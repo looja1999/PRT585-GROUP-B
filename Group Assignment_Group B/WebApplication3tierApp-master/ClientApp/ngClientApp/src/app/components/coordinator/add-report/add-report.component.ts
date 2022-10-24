@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-report.component.less']
 })
 export class AddReportComponent implements OnInit {
+  errors: string[] = [];
   addReportRequest: ReportList = {
     reportId: 0,
     reportName: '',
@@ -19,6 +20,7 @@ export class AddReportComponent implements OnInit {
   ngOnInit(): void {
   }
   addReport() {
+    this.errors = [];
     console.log(this.addReportRequest);
     this.reportlistService.addReport(this.addReportRequest).subscribe({
       next: (reportlists) => {
@@ -27,6 +29,7 @@ export class AddReportComponent implements OnInit {
       },
       error: (msg) => {
         console.error(msg);
+        this.errors.push(msg.error);
       },
     });
   }
