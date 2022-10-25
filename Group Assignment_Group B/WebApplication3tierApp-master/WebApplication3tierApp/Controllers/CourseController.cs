@@ -21,11 +21,13 @@ namespace WebApplication3tierApp.Controllers
         {
             _CourseService = CourseService;
             _logger = logger;
+            
         }
 
         [HttpGet("", Name = "GetAllCourses")]
         public async Task<List<CourseDto>> GetAll()
         {
+            _logger.LogInformation("Course executing...");
             var result = await _CourseService.GetAll();
             return result.Select(x => x.ToCourseDto()).ToList();
         }
