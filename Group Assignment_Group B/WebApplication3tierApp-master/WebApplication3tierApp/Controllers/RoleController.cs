@@ -1,5 +1,8 @@
+using _1CommonInfrastructure.Models;
 using _2DataAccessLayer.Services;
 using _3BusinessLogicLayer.Interfaces;
+using _3BusinessLogicLayer.Services;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication3tierApp.Models;
@@ -36,12 +39,28 @@ namespace WebApplication3tierApp.Controllers
         }
 
         [HttpPost, Route("")]
-        public async Task<int> Create([FromBody] RoleDto requestDto)
+        public async Task<IActionResult> Create([FromBody] RoleDto requestDto)
         {
             var RoleModel = requestDto.ToRoleModel();
-            return await _RoleService.CreateRole(RoleModel);
-        }
+            RoleValidator validator = new RoleValidator();
+            var validationResult = validator.Validate(RoleModel);
+            if (!validationResult.IsValid)
+            {
+                foreach (ValidationFailure failer in validationResult.Errors)
+                {
 
+                    ModelState.AddModelError(failer.PropertyName, failer.ErrorMessage);
+                }
+                return BadRequest(ModelState);
+            }
+            else
+            {
+                _RoleService.CreateRole(RoleModel);
+                return Ok();
+            }
+
+            //return await 
+        }
         [HttpPut, Route("{id}")]
 
         public async Task<IActionResult> Update([FromBody] RoleDto requestDto)
