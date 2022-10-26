@@ -27,6 +27,7 @@ namespace WebApplication3tierApp.Controllers
         [HttpGet("", Name = "GetAllRoles")]
         public async Task<List<RoleDto>> GetAll()
         {
+            _logger.LogInformation("Role Executing ...");
             var result = await _RoleService.GetAll();
             return result.Select(x => x.ToRoleDto()).ToList();
         }
