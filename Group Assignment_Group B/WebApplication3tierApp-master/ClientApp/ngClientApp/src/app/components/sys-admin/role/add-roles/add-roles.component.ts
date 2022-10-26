@@ -36,6 +36,11 @@ export class AddRolesComponent implements OnInit {
 
   addRole() {
     console.log(this.addRoleRequest);
+    this.addRoleRequest = {
+      roleId: 0,
+      roleName: '' + this.addRoleForm.get('roleName'),
+      roleStatus: '' + this.addRoleForm.get('roleStatus'),
+    };
     this.roleServie.addRole(this.addRoleRequest).subscribe({
       next: (role) => {
         console.log(role);
