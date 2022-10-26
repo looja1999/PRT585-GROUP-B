@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Role } from 'src/app/models/role.model';
 import { RolesService } from 'src/app/services/roles.service';
@@ -15,7 +16,21 @@ export class AddRolesComponent implements OnInit {
     roleStatus: '',
   };
 
-  constructor(private roleServie: RolesService, private router: Router) {}
+  addRoleForm: FormGroup;
+
+  constructor(private roleServie: RolesService, private router: Router) {
+    this.initializeAddRoleForm();
+  }
+
+  initializeAddRoleForm = () => {
+    this.addRoleForm = new FormGroup({
+      roleName: new FormControl('', Validators.required),
+      roleStatus: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(5),
+      ]),
+    });
+  };
 
   ngOnInit(): void {}
 

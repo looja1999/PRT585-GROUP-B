@@ -4,16 +4,20 @@
     <div class="col-4">
       <h2>Add a role</h2>
       <hr />
-      <form (ngSubmit)="addRole()" #form="ngForm">
+      <form (ngSubmit)="addRole()" [formGroup]="addRoleForm" autocomplete="on">
         <div class="mb-3">
           <label for="roleName" class="form-label">Role Name</label>
           <input
+            [class.is-invalid]="
+              addRoleForm.get('roleName').errors &&
+              addRoleForm.get('roleName').touched
+            "
             type="text"
             class="form-control"
             id="roleName"
-            [(ngModel)]="addRoleRequest.roleName"
-            name="roleName"
+            formControlName="roleName"
           />
+          <div class="invalid-feedback">Please enter a role name</div>
           <div id="roleName" class="form-text">Role name must be unique.</div>
         </div>
 
@@ -22,16 +26,33 @@
         <div class="mb-3">
           <label for="roleStatus" class="form-label">Role Status</label>
           <input
+            [class.is-invalid]="
+              addRoleForm.get('roleStatus').errors &&
+              addRoleForm.get('roleStatus').touched
+            "
             type="text"
             class="form-control"
             id="roleStatus"
-            [(ngModel)]="addRoleRequest.roleStatus"
-            name="roleStatus"
+            formControlName="roleStatus"
           />
+          <div
+            *ngIf="addRoleForm.get('roleStatus').hasError('maxlength')"
+            class="invalid-feedback"
+          >
+            Please enter role status less than 6
+          </div>
+          <div
+            *ngIf="addRoleForm.get('roleStatus').hasError('required')"
+            class="invalid-feedback"
+          >
+            Please enter role status
+          </div>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Submit</button>
       </form>
+      <p>Form Value : {{ addRoleForm.value | json }}</p>
+      <p>Form Value : {{ addRoleForm.status | json }}</p>
     </div>
   </div>
 </div>
