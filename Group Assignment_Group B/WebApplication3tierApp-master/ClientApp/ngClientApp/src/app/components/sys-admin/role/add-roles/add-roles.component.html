@@ -49,10 +49,14 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="!addRoleForm.valid"
+        >
+          Submit
+        </button>
       </form>
-      <p>Form Value : {{ addRoleForm.value | json }}</p>
-      <p>Form Value : {{ addRoleForm.status | json }}</p>
     </div>
   </div>
 </div>
