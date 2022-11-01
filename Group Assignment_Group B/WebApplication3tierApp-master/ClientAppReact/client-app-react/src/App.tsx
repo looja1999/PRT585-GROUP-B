@@ -22,6 +22,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import '@progress/kendo-theme-default/dist/all.css';
+
 import Dashboard from './pages/Dashboard/Dashboard';
 import Roles from './pages/Roles/Roles';
 

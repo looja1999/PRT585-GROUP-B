@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
 import './Roles.css';
 
@@ -23,6 +23,11 @@ const Roles: React.FC = () => {
             <IonTitle size="large">Roles</IonTitle>
           </IonToolbar>
         </IonHeader>
+
+        <IonContent className='content-padding'>
+          <IonTitle>Roles Table</IonTitle>
+          <p style={{padding: "5px 20px"}}> Contains list of all roles 👇</p>
+        </IonContent>
       </IonContent>
     </IonPage>
   );
