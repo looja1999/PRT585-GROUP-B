@@ -26,6 +26,8 @@ import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { LoginComponent } from './components/login/login.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    GridModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
