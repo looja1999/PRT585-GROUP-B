@@ -23,28 +23,29 @@ import { AddFeatureComponent } from './components/sys-admin/feature/add-feature/
 import { EditFeatureComponent } from './components/sys-admin/feature/edit-feature/edit-feature.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
+import { KendoUiComponent } from './components/KendoUI/kendo-ui/kendo-ui.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent},
-  { path: 'login', component: LoginComponent},
+  { path: '', component: DashboardComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'person', component: PersonComponent },
   { path: 'role', component: RoleComponent },
   { path: 'role/add-role', component: AddRolesComponent },
   { path: 'role/edit-role/:id', component: EditRolesComponent },
   { path: 'coordinator', component: CoordinatorComponent },
   { path: 'unit', component: UnitListComponent },
-  { path: 'unit/add-unit', component: AddUnitComponent},
+  { path: 'unit/add-unit', component: AddUnitComponent },
   { path: 'unit/edit-unit/:id', component: EditUnitComponent },
-  { path: 'report', component: ReportListComponent},
-  { path: 'report/add-report', component: AddReportComponent},
+  { path: 'report', component: ReportListComponent },
+  { path: 'report/add-report', component: AddReportComponent },
   { path: 'report/edit-report/:id', component: EditReportComponent },
-  { path: 'course', component: CourseListComponent},
-  { path: 'course/add-course', component: AddCourseComponent},
+  { path: 'course', component: CourseListComponent },
+  { path: 'course/add-course', component: AddCourseComponent },
   { path: 'course/edit-course/:id', component: EditCourseComponent },
-  { path: 'feature', component: FeatureComponent},
-  { path: 'feature/add-feature', component: AddFeatureComponent},
-  { path: 'feature/edit-feature/:id', component: EditFeatureComponent}
-
+  { path: 'feature', component: FeatureComponent },
+  { path: 'feature/add-feature', component: AddFeatureComponent },
+  { path: 'feature/edit-feature/:id', component: EditFeatureComponent },
+  { path: 'kendo-ui', component: KendoUiComponent },
 ];
 
 @NgModule({

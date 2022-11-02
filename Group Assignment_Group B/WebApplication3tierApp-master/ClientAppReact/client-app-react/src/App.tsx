@@ -25,7 +25,7 @@ import './theme/variables.css';
 import '@progress/kendo-theme-default/dist/all.css';
 
 import Dashboard from './pages/Dashboard/Dashboard';
-import Roles from './pages/Roles/Roles';
+import Products from './pages/Products/Products';
 
 setupIonicReact();
 
@@ -42,8 +42,8 @@ const App: React.FC = () => {
             <Route path="/page/dashboard" exact={true}>
               <Dashboard />
             </Route>
-            <Route path="/page/roles" exact={true}>
-              <Roles />
+            <Route path="/page/products" exact={true}>
+              <Products />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

@@ -1,4 +1,5 @@
-import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonMenuButton, IonPage, IonReorder, IonReorderGroup, IonRouterLink, IonRow, IonSearchbar, IonText, IonTitle, IonToolbar, ItemReorderEventDetail } from '@ionic/react';
+import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonMenuButton, IonPage, IonReorder, IonReorderGroup, IonRouterLink, IonRow, IonSearchbar, IonText, IonTitle, IonToast, IonToolbar, ItemReorderEventDetail } from '@ionic/react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
@@ -16,9 +17,18 @@ const Dashboard: React.FC = () => {
     event.detail.complete();
   }
 
+  const [showToast, setShowToast] = useState(false);
+
   // const { name } = useParams<{ name: string; }>();
 
+  useEffect(() => {
+    setTimeout(() => {
+      setShowToast(true)
+    }, 2000)
+  }, [])
+
   return (
+
     <IonPage>
       <IonHeader>
         <IonToolbar>
@@ -40,37 +50,29 @@ const Dashboard: React.FC = () => {
           <IonTitle style={{marginBottom : "10px"}}>Welcome, User</IonTitle>
 
             <IonGrid>
-              
-                
                   <IonRow>
-                      <IonCard style={{width : "100%"}} color="tertiary">
-                        <IonCardHeader>
-                          <IonCardTitle>Roles</IonCardTitle>
-                          <IonCardSubtitle>Total Roles number of available : 10</IonCardSubtitle>
-                        </IonCardHeader>
-                        <IonButton fill="clear" color="light" routerLink="/page/roles"> 
-                          More Info
-                        </IonButton>
-                      </IonCard>
-                  </IonRow>
-
-                  <IonRow>
-                    <IonCard  style={{width : "100%"}} color="success" >
-                      <IonCardHeader>
-                        <IonCardTitle>Features</IonCardTitle>
-                        <IonCardSubtitle>Total Features number of available : 20</IonCardSubtitle>
-                        </IonCardHeader>
-                        <IonButton fill="clear" color="light"> 
-                          <a style={{color: "white"}}> More Info </a>
-                        </IonButton>
-                      </IonCard>
+                      <IonCol size="12" sizeSm='4'>
+                        <IonCard style={{width : "90%"}} color="tertiary">
+                          <IonCardHeader>
+                            <IonCardTitle>Products</IonCardTitle>
+                            <IonCardSubtitle>Total Products number of available : 10</IonCardSubtitle>
+                          </IonCardHeader>
+                          <IonButton fill="clear" color="light" routerLink="/page/products"> 
+                            More Info
+                          </IonButton>
+                        </IonCard>
+                      </IonCol>
                   </IonRow>
             </IonGrid>
-
-            
           
         </IonContent>
 
+        <IonToast
+        isOpen={showToast}
+        onDidDismiss={() => setShowToast(false)}
+        message="Welcome to Admin Dashboard 🚀"
+        duration={2000}
+        />
 
       </IonContent>
 

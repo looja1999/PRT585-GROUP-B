@@ -27,6 +27,7 @@ import { EditFeatureComponent } from './components/sys-admin/feature/edit-featur
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { KendoUiComponent } from './components/KendoUI/kendo-ui/kendo-ui.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
     EditFeatureComponent,
     DashboardComponent,
     LoginComponent,
+    KendoUiComponent,
   ],
   imports: [
     BrowserModule,

@@ -29,8 +29,8 @@ const appPages: AppPage[] = [
     mdIcon: mailSharp
   },
   {
-    title: 'Roles',
-    url: '/page/roles',
+    title: 'Products',
+    url: '/page/products',
     iosIcon: mailOutline,
     mdIcon: mailSharp
   }
