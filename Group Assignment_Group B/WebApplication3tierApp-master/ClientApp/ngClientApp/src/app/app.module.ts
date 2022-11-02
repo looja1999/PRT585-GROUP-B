@@ -28,6 +28,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { KendoUiComponent } from './components/KendoUI/kendo-ui/kendo-ui.component';
+import { ToastComponent } from './app/components/toast/toast.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { KendoUiComponent } from './components/KendoUI/kendo-ui/kendo-ui.compone
     DashboardComponent,
     LoginComponent,
     KendoUiComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
