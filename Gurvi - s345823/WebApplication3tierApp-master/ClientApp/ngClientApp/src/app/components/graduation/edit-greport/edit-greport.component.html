@@ -1,0 +1,44 @@
+<div class="container my-5">
+    <!-- Form  -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-4">
+        <h2>Edit a GReport</h2>
+        <hr />
+        <form #form="ngForm" (ngSubmit)="updateGReport()">
+          <!-- Id -->
+          <div class="mb-3">
+            <label for="gReportId" class="form-label">GReport ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="greportId"
+              [(ngModel)]="greportDetails.gReportId"
+              name="greportId"
+              readonly
+            />
+          </div>
+   
+          <div class="mb-3">
+            <label for="greportName" class="form-label">GReport Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="gReportName"
+              [(ngModel)]="greportDetails.gReportName"
+              name="gReportName"
+            />
+          </div>
+  
+          <button type="submit" class="btn btn-success w-50">Save</button>
+          <button
+            type="Delte"
+            class="btn btn-danger w-50"
+            (click)="deleteGReport(greportDetails.gReportId)"
+          >
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

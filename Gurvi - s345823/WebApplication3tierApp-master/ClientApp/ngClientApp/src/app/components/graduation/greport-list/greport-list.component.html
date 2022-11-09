@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <div class="row">
+      <div class="col-6">
+        <h2>GReport List</h2>
+      </div>
+      <div class="col-6" style="text-align: right">
+        <a class="add-button btn btn-outline-primary" routerLink="add-greport"
+          >Add GReport</a
+        >
+      </div>
+    </div>
+      <hr />
+      <!-- Checks data is contained in the table or not.  -->
+      <div *ngIf="gReportLists && gReportLists.length > 0">
+        <p>Contains list of all the greports available.</p>
+        <table class="table table-hover table-bordered my-4">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">GReport ID</th>
+              <th scope="col">GReport Name</th>
+              <th scope="col">Edit / Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let greportlist of gReportLists">
+              <td>{{ greportlist.gReportId }}</td>
+              <td>{{ greportlist.gReportName }}</td>
+              <td>
+                <a [routerLink]="['edit-greport', greportlist.gReportId]"> Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <p *ngIf="gReportLists.length === 0" class="text-danger">
+        <strong> NO UNITS AVAILABLE ! ! ! </strong>
+      </p>
+    </div>
+    

@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MvcMovie
+build_property.RootNamespace = MvcMovie
+build_property.ProjectDir = D:\C D U\S E M 4\PRT 585 SOFTWARE ENGENEERING PRACTICE\PRT585-GROUP-B\Gurvi - s345823\MvcMovie\MvcMovie\MvcMovie\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\C D U\S E M 4\PRT 585 SOFTWARE ENGENEERING PRACTICE\PRT585-GROUP-B\Gurvi - s345823\MvcMovie\MvcMovie\MvcMovie
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Movies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Movies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Movies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Movies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Movies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C D U/S E M 4/PRT 585 SOFTWARE ENGENEERING PRACTICE/PRT585-GROUP-B/Gurvi - s345823/MvcMovie/MvcMovie/MvcMovie/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xuhsjtrapm

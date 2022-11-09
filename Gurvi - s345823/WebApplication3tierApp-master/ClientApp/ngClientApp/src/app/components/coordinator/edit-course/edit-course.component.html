@@ -1,0 +1,55 @@
+<div class="container my-5">
+    <!-- Form  -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-4">
+        <h2>Edit a Course</h2>
+        <hr />
+        <form #form="ngForm" (ngSubmit)="updateCourse()">
+          <!-- Id -->
+          <div class="mb-3">
+            <label for="courseId" class="form-label">Course ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseId"
+              [(ngModel)]="courseDetails.courseId"
+              name="courseId"
+              readonly
+            />
+          </div>
+  
+          <div class="mb-3">
+            <label for="courseCode" class="form-label">Course Code</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseCode"
+              [(ngModel)]="courseDetails.courseCode"
+              name="courseCode"
+            />            
+          </div>
+  
+          <div class="mb-3">
+            <label for="courseName" class="form-label">Course Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseName"
+              [(ngModel)]="courseDetails.courseName"
+              name="courseName"
+            />
+          </div>
+  
+          <button type="submit" class="btn btn-success w-50">Save</button>
+          <button
+            type="Delte"
+            class="btn btn-danger w-50"
+            (click)="deleteCourse(courseDetails.courseId)"
+          >
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

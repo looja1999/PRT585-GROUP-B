@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <h2>Unit List</h2>
+    </div>
+    <div class="col-6" style="text-align: right">
+      <a class="add-button btn btn-outline-primary" routerLink="add-unit"
+        >Add Unit</a
+      >
+    </div>
+  </div>
+  <hr />
+  <!-- Checks data is contained in the table or not.  -->
+  <div *ngIf="unitlist && unitlist.length > 0">
+    <p>Contains list of all the units available.</p>
+    <table class="table table-hover table-bordered my-4">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">Unit ID</th>
+          <th scope="col">Unit Name</th>
+          <th scope="col">Edit / Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let unitlists of unitlist">
+          <td style="text-transform: uppercase">{{ unitlists.unitId }}</td>
+          <td style="text-transform: uppercase">{{ unitlists.unitName }}</td>
+          <td>
+            <a [routerLink]="['edit-unit', unitlists.unitId]"> Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p *ngIf="unitlist.length === 0" class="text-danger">
+    <strong> NO UNITS AVAILABLE ! ! ! </strong>
+  </p>
+</div>

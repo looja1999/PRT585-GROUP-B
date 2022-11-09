@@ -1,0 +1,44 @@
+<div class="container my-5">
+    <!-- Form  -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-4">
+        <h2>Edit a Report</h2>
+        <hr />
+        <form #form="ngForm" (ngSubmit)="updateReport()">
+          <!-- Id -->
+          <div class="mb-3">
+            <label for="reportId" class="form-label">Report ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="reportId"
+              [(ngModel)]="reportDetails.reportId"
+              name="reportId"
+              readonly
+            />
+          </div>
+   
+          <div class="mb-3">
+            <label for="reportName" class="form-label">Report Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="reportName"
+              [(ngModel)]="reportDetails.reportName"
+              name="reportName"
+            />
+          </div>
+  
+          <button type="submit" class="btn btn-success w-50">Save</button>
+          <button
+            type="Delte"
+            class="btn btn-danger w-50"
+            (click)="deleteReport(reportDetails.reportId)"
+          >
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
