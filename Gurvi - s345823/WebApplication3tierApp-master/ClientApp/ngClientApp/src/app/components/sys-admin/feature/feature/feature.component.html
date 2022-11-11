@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <h2>Feature Table</h2>
+    </div>
+    <div class="col-6" style="text-align: right">
+      <a class="add-button btn btn-outline-primary" routerLink="add-feature"
+        >Add Feature</a
+      >
+    </div>
+  </div>
+
+  <hr />
+  <!-- Checks data is contained in the table or not.  -->
+  <div *ngIf="features && features.length > 0">
+    <p>Contains list of all the feature available.</p>
+    <table class="table table-hover table-bordered my-4">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col"># Feature Id</th>
+          <th scope="col">Feature name</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feature of features">
+          <td>{{ feature.featureId }}</td>
+          <td>{{ feature.featureName }}</td>
+          <td>
+            <a [routerLink]="['edit-feature', feature.featureId]"> Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p *ngIf="features.length === 0" class="text-danger">
+    <strong> NO feature AVAILABLE ! ! ! </strong>
+  </p>
+</div>

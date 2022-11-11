@@ -1,0 +1,63 @@
+<div class="container">
+  <h2 class="my-5">Dashboard</h2>
+  <div class="row my-3">
+    <div class="col">
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <h5 class="card-title">Roles</h5>
+          <p class="card-text">Total number of roles available.</p>
+          <p class="arrayLength">{{roles.length}}</p>
+          <a routerLink = 'role' target="_blank" class="btn btn-primary">Go to Roles page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <h5 class="card-title">Course</h5>
+          <p class="card-text">Total number of course available.</p>
+          <p class="arrayLength">{{courses.length}}</p>
+          <a routerLink = 'course' target="_blank" class="btn btn-primary">Go to Courses page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 25rem;">
+        <div class="card-body">
+          <h5 class="card-title">Unit</h5>
+          <p class="card-text">Total number of unit available.</p>
+          <p class="arrayLength">{{units.length}}</p>
+          <a routerLink = 'unit' target="_blank" class="btn btn-primary">Go to Units page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-5">
+      <div class="col">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">Report</h5>
+            <p class="card-text">Total number of reports available.</p>
+            <p class="arrayLength">{{reports.length}}</p>
+            <a routerLink = 'report' target="_blank" class="btn btn-primary">Go to Reports page</a>
+          </div>
+        </div>
+      </div>
+      
+    <div class="row my-5">
+      <div class="col">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">GReport</h5>
+            <p class="card-text">Total number of greports available.</p>
+            <p class="arrayLength">{{greports.length}}</p>
+            <a routerLink = 'greport' target="_blank" class="btn btn-primary">Go to GReports page</a>
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+  </div>
+</div>

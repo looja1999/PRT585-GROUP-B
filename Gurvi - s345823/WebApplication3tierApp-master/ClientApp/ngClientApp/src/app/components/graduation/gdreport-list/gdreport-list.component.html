@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <div class="row">
+      <div class="col-6">
+        <h2>GdReport List</h2>
+      </div>
+      <div class="col-6" style="text-align: right">
+        <a class="add-button btn btn-outline-primary" routerLink="add-gdreport"
+          >Add GdReport</a
+        >
+      </div>
+    </div>
+      <hr />
+      <!-- Checks data is contained in the table or not.  -->
+      <div *ngIf="gdReportLists && gdReportLists.length > 0">
+        <p>Contains list of all the gdreports available.</p>
+        <table class="table table-hover table-bordered my-4">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">GdReport ID</th>
+              <th scope="col">GdReport Name</th>
+              <th scope="col">Edit / Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let gdreportlist of gdReportLists">
+              <td>{{ gdreportlist.gdReportId }}</td>
+              <td>{{ gdreportlist.gdReportName }}</td>
+              <td>
+                <a [routerLink]="['edit-gdreport', gdreportlist.gdReportId]"> Edit</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+      <p *ngIf="gdReportLists.length === 0" class="text-danger">
+        <strong> NO REPORTS AVAILABLE ! ! ! </strong>
+      </p>
+    </div>
+    

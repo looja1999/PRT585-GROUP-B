@@ -1,0 +1,43 @@
+<div class="container my-5">
+    <!-- Form  -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-4">
+        <h2>Add a Course</h2>
+        <hr />
+
+        <div class="alert alert-danger" role="alert" *ngIf="errors.length > 0">
+          <ul>
+            <li *ngFor="let error of errors">
+              {{ error | json }}
+            </li>
+          </ul>
+        </div>        
+
+        <form (ngSubmit)="addCourse()" #form="ngForm">
+          <div class="mb-3">
+            <label for="courseCode" class="form-label">Course Code</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseCode"
+              [(ngModel)]="addCourseRequest.courseCode"
+              name="courseCode"
+            />            
+          </div>
+  
+          <div class="mb-3">
+            <label for="courseName" class="form-label">Course Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseName"
+              [(ngModel)]="addCourseRequest.courseName"
+              name="courseName"
+            />
+          </div>
+  
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>  

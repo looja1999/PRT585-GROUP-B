@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <h2>Report List</h2>
+    </div>
+    <div class="col-6" style="text-align: right">
+      <a class="add-button btn btn-outline-primary" routerLink="add-report"
+        >Add Report</a
+      >
+    </div>
+  </div>
+    <hr />
+    <!-- Checks data is contained in the table or not.  -->
+    <div *ngIf="reportlist && reportlist.length > 0">
+      <p>Contains list of all the reports available.</p>
+      <table class="table table-hover table-bordered my-4">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Report ID</th>
+            <th scope="col">Report Name</th>
+            <th scope="col">Edit / Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reportlists of reportlist">
+            <td style="text-transform: uppercase">{{ reportlists.reportId }}</td>
+            <td style="text-transform: uppercase">{{ reportlists.reportName }}</td>
+            <td>
+              <a [routerLink]="['edit-report', reportlists.reportId]"> Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <p *ngIf="reportlist.length === 0" class="text-danger">
+      <strong> NO UNITS AVAILABLE ! ! ! </strong>
+    </p>
+  </div>
+  
